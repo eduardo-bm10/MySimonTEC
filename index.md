@@ -36,11 +36,12 @@ A continuación se encuentra el diagrama conceptual que muestra la solución pri
 ### _Diagrama de clases_
 El siguiente diagrama de clases se presenta en el formato de Diagrama UML y especifica cada clase utilizada en la implementación de SimonTEC: ![Diagrama](src)
 
-### _Clasificación_
+### _Clasificación por criticidad y frecuencia_
 ```markdown
-Por criticidad:
-
-Por frecuencia:
+Siempre usado
+**Hola**                  **Hey**
+            **GG**
+Rara vez usado
 ```
 ### _Minimal System Span_
 ```markdown
