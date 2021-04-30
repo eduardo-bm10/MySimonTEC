@@ -38,13 +38,32 @@ El siguiente diagrama de clases se presenta en el formato de Diagrama UML y espe
 
 ### _Clasificación por criticidad y frecuencia_
 ```markdown
-Siempre usado
-**Hola**                  **Hey**
-            **GG**
-Rara vez usado
+A continuación se presenta un arreglo que acomoda _features_ del programa SimonTEC entre barras verticales 
+
+**Siempre usado**___________________________________________________________________________________________________________________
+                      |Abrir ventana de juego|       |   Mostrar color  |         |Mostrar nivel actual|      | Repetir secuencia |       
+                      |  Frecuencia: alta    |       | Frecuencia: alta |         |  Frecuencia: baja  |      | Frecuencia: media |
+
+                      
+                      |  Cambio de dificultad  |       | Seleccionar color |            | Añadir color a la secuencia |
+                      |     Frecuencia: baja   |       | Frecuencia: media |            |       Frecuencia: baja      |
+                      
+                      
+                                                       |  Subir de nivel  |
+                                                       | Frecuencia: media|
+
+                      
+                      | Ganar el juego  |              | Perder el juego |              
+                      | Frecuencia: baja|              | Frecuencia: baja|              
+                 ____________________________________________________________________________________________________________________
+**Rara vez usado**
 ```
 ### _Minimal System Span_
 ```markdown
+El _Minimal System Span_ se refiere a los features mínimos que hacen que el programa sea funcional. 
+De los features con los que cuenta SimonTEC, su funcionalidad recae en:
+
+
 ```
 ### _Plan de iteraciones_
 ```markdown
