@@ -34,7 +34,9 @@ A continuación se encuentra el diagrama conceptual que muestra la solución pri
 ![Diagrama conceptual SimonTec](https://user-images.githubusercontent.com/62963679/116627385-4528c900-a90a-11eb-9374-d34a5064d000.png)
 
 ### _Diagrama de clases_
-El siguiente diagrama de clases se presenta en el formato de Diagrama UML y especifica cada clase utilizada en la implementación de SimonTEC: ![Diagrama](src)
+El siguiente diagrama de clases se presenta en el formato de Diagrama UML y especifica cada clase utilizada en la implementación de SimonTEC: 
+![SimonTEC - UML Diagram](https://user-images.githubusercontent.com/62963679/116753083-c42e0800-a9c3-11eb-8498-7bfb2b9c236d.png)
+
 
 ### _Clasificación por criticidad y frecuencia_
 ```markdown
@@ -42,11 +44,11 @@ A continuación se presenta un arreglo que acomoda features del programa SimonTE
 
 Siempre usado ___________________________________________________________________________________________________________________
                |Abrir ventana de juego|       |   Mostrar color  |         |Mostrar nivel actual|      | Repetir secuencia |       
-               |  Frecuencia: alta    |       | Frecuencia: alta |         |  Frecuencia: baja  |      | Frecuencia: media |
+               |  Frecuencia: baja    |       | Frecuencia: alta |         |  Frecuencia: media |      | Frecuencia: media |
 
                       
                |  Cambio de dificultad  |       | Seleccionar color |            | Añadir color a la secuencia |
-               |     Frecuencia: baja   |       | Frecuencia: media |            |       Frecuencia: baja      |
+               |     Frecuencia: baja   |       | Frecuencia: alta  |            |       Frecuencia: media     |
                       
                       
                                                |  Subir de nivel  |
@@ -61,10 +63,43 @@ Rara vez usado
 ### _Minimal System Span_
 ```markdown
 El Minimal System Span se refiere a los features mínimos que hacen que el programa sea funcional. 
-De los features con los que cuenta SimonTEC, su funcionalidad recae en:
+De los features con los que cuenta SimonTEC, su funcionalidad más básica recae en:
 
+Siempre usado __________________________________________________________________________________________________
+                  
+                  |Abrir ventana de juego|       |   Mostrar color  |               | Repetir secuencia |       
+                  |  Frecuencia: baja    |       | Frecuencia: alta |               | Frecuencia: media |
 
+                                
+                                | Seleccionar color |             | Añadir color a la secuencia |
+                                | Frecuencia: alta  |             |       Frecuencia: media     |
+                                
+                                
+                                
+                                
+
+              __________________________________________________________________________________________________
+Rara vez usado                                             
+                     
 ```
 ### _Plan de iteraciones_
 ```markdown
+A continuación se presenta el orden secuencial de la ejecución de los features del programa. 
+Este orden se mantendrá cada vez que se inicie SimonTEC.
+ _____________________________________________________________________________________________________________________________________________
+        **Iniciar**               |            **Jugar**                |            **Reiniciar**             |          **Finalizar**       |
+                                  |                                     |                                      |                              |
+1. |Abrir ventana de juego|       | 1.   | Seleccionar color |          | 1. | Añadir color a la secuencia |   | 1.   |  Ganar el juego  |    |
+   |  Frecuencia: baja    |       |      | Frencuencia: alta |          |    |      Frencuencia: media     |   |      | Frecuencia: baja |    |
+                                  |                                     |                                      |                              |
+                                  |                                     |                                      |              o bien          |
+2.  |Mostrar nivel actual|        | 2.  | Cambio de dificultad |        | 2.    | Repetir secuencia |          |                              |
+    |  Frecuencia: media |        |     |   Frecuencia: baja   |        |       | Frecuencia: media |          | 1.   |  Perder el juego  |   |
+                                  |                                     |                                      |      | Frencuencia: baja |   |
+                                  |                                     |                                      |                              |
+3.   |    Mostrar color  |        | 3.   |   Subir de nivel   |         |                                      |                              |
+     | Frencuencia: alta |        |      | Frencuencia: media |         |                                      |                              |
+                                  |                                     |                                      |                              |
+ _________________________________|_____________________________________|______________________________________|______________________________|
+
 ``` 
